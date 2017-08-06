@@ -1,4 +1,7 @@
 def partialOrderings(string, solved):
+    '''Returns number of ordered lists satisfying a path string.
+        NOTE:This is an upperbound on number of pathstring solutions
+    '''
     count = 0
     solved[string] = []
     if len(string) == 1:
@@ -28,5 +31,3 @@ def partialOrderings(string, solved):
                 i += 1
     solved[string] = count
     return count
-
-print(partialOrderings("DUUDUDU", {}))
